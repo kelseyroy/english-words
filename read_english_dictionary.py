@@ -4,8 +4,16 @@ def load_words():
 
     return valid_words
 
+def save_words(words):
+    df=open('5_letter_words.txt','w')
+    for word in words:
+        if len(word) == 5:
+            df.write(word)
+            df.write('\n')
+    df.close()
+
 
 if __name__ == '__main__':
     english_words = load_words()
     # demo print
-    print('fate' in english_words)
+    save_words(english_words)
