@@ -8,7 +8,7 @@ def save_words(words):
     df=open('5_letter_words.txt','w')
     for word in words:
         if len(word) == 5:
-            df.write(word)
+            df.write(word.upper())
             df.write('\n')
     df.close()
 
